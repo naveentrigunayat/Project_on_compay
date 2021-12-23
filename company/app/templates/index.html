@@ -1,0 +1,41 @@
+<form method="POST"  action="add">
+    {% csrf_token %}
+    
+  
+   
+    <label>Employee First Name :</label>
+    <input type="text" id="" name="" ><br>
+    
+    <label> Employee last Name : </label>
+    <input type="text" id="" name="" ><br>
+
+    <label>Email :</label>
+    <input type="text" id="" name="" ><br>
+    
+    <label>Date of Birth :</label>
+    <input type="date" id="" name="" ><br>
+
+    <label>Date of Jioning :</label>
+    <input type="date" id="" name="" ><br>
+
+    <label>Salary :</label>
+    <input type="number" id="" name="" ><br>
+
+    <label> Designation : </label>
+    <select name="cars" id="cars">
+        <option value="1">Manager</option>
+        <option value="2">Employee</option>
+        
+    </select><br>
+    
+
+    <label>Department :</label>
+    <select name="cars" id="cars">
+        <option value="It Department">It Department</option>
+        <option value="Hr Department">Hr Department</option>
+        
+    </select><br>
+    <div>
+    <button type="Submit">Submit</botton>
+    </div>
+</form>
