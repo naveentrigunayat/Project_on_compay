@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Employee
-from .form import EmployeeForm
+from .forms import EmployeeForm
 
 # Create your views here.
 def Welcome(request):
@@ -16,9 +16,3 @@ def load_form(request):
 def add(request):
     form = EmployeeForm(request.POST)
     form.save()
-    
-
-
-
-
-
