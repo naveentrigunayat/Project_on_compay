@@ -1,0 +1,55 @@
+<style>
+    .sidebar {
+        width: 200px;
+        height: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        background-color: darkblue;
+    }
+    
+    .sidebar a {
+        padding: 30px;
+        text-decoration: none;
+        color: darkgray;
+    }
+    
+    .sidebar a:hover {
+        color: lime;
+    }
+    
+    .main {
+        padding-left: 200px;
+    }
+</style>
+
+<div class="sidebar">
+    {%if user.is_authenticated%}
+    <h1 style="color: red;"> {{user}}</h1>
+    {%endif%}
+    <h2><a href="/">Home</a></h2>
+
+    {%if user.is_authenticated%}
+
+    <h2><a href="{%url 'account:editprofile'%}">EditProfile</a></h2>
+    <h2><a href="{%url 'income:addincome'%}">AddIncome</a></h2>
+    <h2><a href="{%url 'expense:addexpense'%}">AddExpense</a></h2>
+    <h2><a href="{%url 'income:incl'%}">IncomeList</a></h2>
+    <h2><a href="{%url 'expense:expl'%}">ExpenseList</a></h2>
+    <h2><a href="{%url 'account:logout'%}">Logout</a></h2>
+
+    {%else%}
+
+    <h2><a href="{%url 'account:adduser'%}">Registre</a></h2>
+    <h2><a href="{%url 'account:login'%}">Login</a></h2>
+
+
+    {%endif%}
+
+    <h2><a href="">Contact-Us</a></h2>
+
+</div>
+
+<div class="main">
+    {%block data%} {%endblock%}
+</div>

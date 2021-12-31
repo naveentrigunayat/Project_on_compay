@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <div class="jumbotron">
+        <center><h1>News</h1>
+           <a href="/" class="btn btn-danger">Menu</a>
+            
+        </center>
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card">
+                <img   class="card-img-top" src = "{{ news.0.image }}">
+                <div class="card-body">
+                    <a href="{{ news.0.url }}"><h5 class="card-title">{{ news.0.title }}</h5></a>
+                    <p class="card-text">{{ news.0.description }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img   class="card-img-top" src = "{{ news.1.image }}">
+                <div class="card-body">
+                    <a href="{{ news.1.url }}"><h5 class="card-title">{{ news.1.title }}</h5></a>
+                    <p class="card-text">{{ news.1.description }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img   class="card-img-top" src = "{{ news.2.image }}">
+                <div class="card-body">
+                    <a href="{{ news.2.url }}"><h5 class="card-title">{{ news.2.title }}</h5></a>
+                    <p class="card-text">{{ news.2.description }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img   class="card-img-top" src = "{{ news.3.image }}">
+                <div class="card-body">
+                    <a href="{{ news.3.url }}"><h5 class="card-title">{{ news.3.title }}</h5></a>
+                    <p class="card-text">{{ news.3.description }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card">
+                <img   class="card-img-top" src = "{{ news.5.image }}">
+                <div class="card-body">
+                    <a href="{{ news.5.url }}"><h5 class="card-title">{{ news.5.title }}</h5></a>
+                    <p class="card-text">{{ news.5.description }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img   class="card-img-top" src = "{{ news.6.image }}">
+                <div class="card-body">
+                    <a href="{{ news.6.url }}"><h5 class="card-title">{{ news.6.title }}</h5></a>
+                    <p class="card-text">{{ news.6.description }}</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col">
+            <div class="card">
+                <img   class="card-img-top" src = "{{ news.7.image }}">
+                    <div class="card-body">
+                        <a href="{{ news.7.url }}"><h5 class="card-title">{{ news.7.title }}</h5></a>
+                        <p class="card-text">{{ news.7.description }}</p>
+                    </div>
+                </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                    <img   class="card-img-top" src = "{{ news.8.image }}">
+                    <div class="card-body">
+                        <a href="{{ news.8.url }}"><h5 class="card-title">{{ news.8.title }}</h5></a>
+                        <p class="card-text">{{ news.8.description }}</p>
+                    </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                    <img   class="card-img-top" src = "{{ news.9.image }}">
+                    <div class="card-body">
+                        <a href="{{ news.9.url }}"><h5 class="card-title">{{ news.9.title }}</h5></a>
+                        <p class="card-text">{{ news.9.description }}</p>
+            </div>
+        </div>
+        
+    </div>
+    <script
+src="http://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

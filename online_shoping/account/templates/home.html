@@ -1,0 +1,23 @@
+{%extends 'base.html'%} {%block Data%} {%for i in pl%}
+<div class="col-lg-4 col-md-6 mb-4">
+    <div class="card h-100">
+        <a href="#"><img class="card-img-top" src="{{i.img}}" alt=""></a>
+        <div class="card-body">
+            <h4 class="card-title">
+                <a href="#">{{i.name}}</a>
+            </h4>
+            <h5>{{i.price}}&nbsp; &#x20B9</h5>
+            {%if user.is_authenticated%}
+            <h5><button><a style="text-decoration: none;" href="{%url 'orderapp:addcart' i.id %}">addToCart</a></button></h5>
+            {%else%}
+            <h5><button><a style="text-decoration: none;" href="{%url 'account:login' %}">addToCart</a></button></h5>
+            {%endif%}
+            <p class="card-text">{{i.description}}</p>
+        </div>
+        <div class="card-footer">
+            <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+        </div>
+    </div>
+</div>
+
+{%endfor%} {%endblock%}

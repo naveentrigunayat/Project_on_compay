@@ -1,0 +1,53 @@
+{%extends 'base.html'%} {%block data%}
+<h1> All Income Details</h1>
+
+<table cellspacing="10" border="1">
+    <tr>
+        <th>Id</th>
+        <th>Income</th>
+        <th>IncomeType</th>
+        <th>IncomeDate</th>
+        <th>Discription</th>
+        <th>User</th>
+        <th colspan="2">Action</th>
+    </tr>
+    {% for i in inc%}
+    <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.income}}</td>
+        <td>{{i.incomeType}}</td>
+        <td>{{i.incomeDate}}</td>
+        <td>{{i.description}}</td>
+        <td>{{i.user}}</td>
+        <td><a href="{%url 'income:income_delete' i.id %}">Delete</a></td>
+        <td><a href="">Edit</a></td>
+    </tr>
+    {%endfor%}
+</table>
+
+<style>
+    .rside {
+        width: 260px;
+        height: 100%;
+        position: fixed;
+        right: 0%;
+        top: 0%;
+        background-color: hotpink;
+    }
+</style>
+<div class="rside">
+    <h1> By Salary</h1>
+    {%for i in income%}
+    <h2><a href="">{{i}}</a></h2>
+    {%endfor%}
+    <h1> By Salary-Type</h1>
+    {%for i in inct%}
+    <h2><a href="">{{i}}</a></h2>
+    {%endfor%}
+    <h1> By Salary-Date</h1>
+    {%for i in dl%}
+    <h2><a href="">{{i}}</a></h2>
+    {%endfor%}
+</div>
+
+{%endblock%}

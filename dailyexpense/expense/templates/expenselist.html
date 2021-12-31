@@ -1,0 +1,24 @@
+{%extends 'base.html'%} {%block data%}
+<h1> All Expense Details</h1>
+
+<table cellspacing="10" border="1">
+    <tr>
+        <th>Id</th>
+        <th>Expense</th>
+        <th>ExpenseType</th>
+        <th>ExpenseDate</th>
+        <th>Discription</th>
+        <th>User</th>
+    </tr>
+    {% for i in exp%}
+    <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.expense}}</td>
+        <td>{{i.expenseType}}</td>
+        <td>{{i.expenseDate}}</td>
+        <td>{{i.description}}</td>
+        <td>{{i.user}}</td>
+    </tr>
+    {%endfor%}
+</table>
+{%endblock%}

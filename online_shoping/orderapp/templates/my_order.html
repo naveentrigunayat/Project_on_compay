@@ -1,0 +1,31 @@
+{% extends 'base.html' %} {%block Data%}
+<form method="POST">
+    {%csrf_token%}
+    <table border="2" cellspacing="10">
+        <tr>
+            <th>Id</th>
+            <th>TotalBill</th>
+            <th>Status</th>
+            <th>OrderDate</th>
+            <th>User</th>
+
+            <th>Action</th>
+        </tr>
+        {% for i in orl%}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.totalBill}}</td>
+            <td>{{i.status}}</td>
+            <td>{{i.order_date}}</td>
+            <td>{{i.user}}</td>
+
+            <td><a href="">Delete</a></td>
+        </tr>
+        {%endfor%}
+
+        </tr>
+    </table>
+</form>
+<br>
+<br>
+<br> {% endblock %}
